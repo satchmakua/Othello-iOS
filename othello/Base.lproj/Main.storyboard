@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="othello" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUU-Ks-SkS" customClass="OthelloView" customModule="othello" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="392"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player's Turn: Black" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-rf-Zjm">
+                                        <rect key="frame" x="137" y="99" width="200" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="7wN-Xw-H0J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LcU-rf-Zjm" secondAttribute="trailing" constant="56" id="Jns-8S-E5V"/>
+                                    <constraint firstItem="LcU-rf-Zjm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uUU-Ks-SkS" secondAttribute="leading" constant="20" symbolic="YES" id="QS1-du-1oz"/>
+                                    <constraint firstItem="LcU-rf-Zjm" firstAttribute="top" secondItem="uUU-Ks-SkS" secondAttribute="top" constant="99" id="Sj6-N3-u0i"/>
+                                    <constraint firstAttribute="width" secondItem="uUU-Ks-SkS" secondAttribute="height" multiplier="1:1" constant="1" id="aTX-Me-G5B"/>
+                                    <constraint firstAttribute="width" secondItem="uUU-Ks-SkS" secondAttribute="height" multiplier="1:1" constant="1" id="hX6-o2-gm1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uUU-Ks-SkS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Na-tx-F6S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uUU-Ks-SkS" secondAttribute="bottom" id="4rW-ya-2qq"/>
+                            <constraint firstItem="uUU-Ks-SkS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9fo-mM-z7b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uUU-Ks-SkS" secondAttribute="trailing" id="HBi-sd-lbR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="othelloView" destination="uUU-Ks-SkS" id="H4o-oQ-xHg"/>
+                        <outlet property="playerTurnLabel" destination="LcU-rf-Zjm" id="Koe-zK-JSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
